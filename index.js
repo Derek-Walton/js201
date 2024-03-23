@@ -48,3 +48,48 @@ function arraySet(arr, i, n){
     }
 }
 
+function addAll(arr){
+    let total = 0;
+    for (let number of arr) {
+        total += number;
+    }
+    return total;
+}
+
+function larger(a, b){
+    return(Math.max(a, b));
+}
+
+function largest(arr){
+    if (arr.length > 0){
+        let currentLargest = arr[0];
+        for (let number of arr){
+            currentLargest = larger(currentLargest, number);
+        }
+        return currentLargest
+    } else {
+        return null;
+    }
+}
+
+function compare(a, b) {
+    if (a.length != b.length) {
+        return false;
+    }
+    for (let i = 0; i < a.length; i++){
+        if (a[i] != b[i]) {
+            return false;
+        }
+    }
+    return true
+}
+
+function addToAll(arr, n){
+    for (let i = 0; i < arr.length; i++){
+        arr[i] += n
+    }
+    return arr;
+}
+
+let remembered;
+
